@@ -5,9 +5,10 @@ import Home from "../pages/Home";
 import { Login } from "../pages";
 import Loader from "./Loader";
 import Navbar from "./Navbar";
-import { useAuth } from "../hooks";
+// import { useAuth } from "../hooks";
 import Signup from "../pages/Signup";
-
+import { useAuth } from "../providers/AuthProvider";
+import { Settings } from "../pages";
 
 // const About = () => {
 //   return <h1>About</h1>
@@ -68,6 +69,7 @@ function App() {
         <Route exact  path="/register" element={<Signup/>}/>
         <Route exact  path="/user/asdasd" element={<UserInfo/>}/>
         <Route exact  path="*" element={<Page404/>}/>
+        <Route exact  path="/settings" element={<Settings/>}/>
       </Routes>
       
     </Router>

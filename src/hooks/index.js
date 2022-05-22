@@ -1,12 +1,13 @@
-import { useState, useContext, useEffect } from "react";
+import { useState, useEffect } from "react";
 import jwt from 'jwt-decode'
-import { AuthContext } from "../providers/AuthProvider";
+// import { AuthContext } from "../providers/AuthProvider";
 import { login as userLogin, register } from '../api'
 import { setItemLocalStorage, LOCALSTORAGE_TOKEN_KEY, removeItemFromLocalStorage, getItemLocalStorage } from "../utils";
 
-export const useAuth = () => {
-    return useContext(AuthContext);
-}
+// export const useAuth = () => {
+//     return useContext(AuthContext);
+// }
+
 export const useProvideAuth = () => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);

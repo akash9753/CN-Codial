@@ -2,9 +2,9 @@ import { useState } from 'react';
 import styles from '../styles/login.module.css'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { useAuth } from '../hooks';
+// import { useAuth } from '../hooks';
 import { useNavigate } from 'react-router-dom';
-
+import { useAuth } from "../providers/AuthProvider";
 const Signup = () => {
     const [name, setName] = useState()
     const [email, setEmail] = useState()
@@ -43,7 +43,7 @@ const Signup = () => {
             console.log("response.message", response.message);
             setTimeout(() => {
             navigate('/login');
-            }, 1000);
+            }, 3000);
             setSigningup(false);
             
             

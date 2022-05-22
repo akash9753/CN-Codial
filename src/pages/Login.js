@@ -2,7 +2,8 @@ import styles from '../styles/login.module.css'
 import {useState} from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { useAuth } from '../hooks';
+// import { useAuth } from '../hooks';
+import { useAuth } from "../providers/AuthProvider";
 import { useNavigate } from 'react-router-dom';
 
 const Login = () =>{
